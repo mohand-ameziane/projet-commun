@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ReadMessagePage } from '../readmessage/readmessage';
 
 /**
  * Generated class for the MessagePage page.
@@ -11,20 +10,16 @@ import { ReadMessagePage } from '../readmessage/readmessage';
 
 @IonicPage()
 @Component({
-  selector: 'page-message',
-  templateUrl: 'message.html',
+  selector: 'page-readmessage',
+  templateUrl: 'readmessage.html',
 })
-export class MessagePage {
+export class ReadMessagePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MessagePage');
-  }
-  
-  onMessage(){
-	  this.navCtrl.push('ReadMessagePage');
+    console.log('ionViewDidLoad ReadMessagePage');
   }
 
 }
