@@ -9,6 +9,7 @@ import {Facebook} from "@ionic-native/facebook";
 import { AngularFireModule } from "angularfire2";
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthProvider } from '../providers/auth/auth';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    Facebook
+    Facebook,
+    AuthProvider
   ]
 })
 export class AppModule {}

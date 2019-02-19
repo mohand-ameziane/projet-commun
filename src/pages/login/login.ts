@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from "../../models/user";
 import { AngularFireAuth } from "angularfire2/auth";
 import { HomePage } from '../home/home';
+import { TablsPage } from '../tabls/tabls';
 
 
 /**
@@ -31,7 +32,7 @@ export class LoginPage {
     const resul= this.afAuth.auth.signInWithEmailAndPassword(user.email,  user.pasword);
     console.log(resul);
     if(resul){
-    this.navCtrl.setRoot('HomePage');
+    this.navCtrl.setRoot('TablsPage');
   }
   }
   catch(e){
