@@ -17,15 +17,25 @@ export class EnregistrerPage {
   }
 
 
-  async register(user : User){
-    try{
-    const resul = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.pasword);
-    console.log(resul);
-    this.navCtrl.push('InformationPage');
-  }
+  public doRegister(user : User){
+     try{
+    if(user.email.includes("@malix.univ-paris1.fr")){
+        //const resul = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
+        //console.log(resul);
+        this.navCtrl.push('InformationPage');
+    }
+    else{
+        window.alert("Veuillez entrer un bon email");
+    }
+    
+      }
+      
+      
+
   catch(e){
     console.error(e);
   }
   }
+  
 
 }
