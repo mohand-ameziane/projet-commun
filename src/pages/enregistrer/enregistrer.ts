@@ -20,7 +20,7 @@ export class EnregistrerPage {
   public doRegister(user : User){
      try{
     if(user.email.includes("@malix.univ-paris1.fr")){
-        //const resul = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.password);
+        //const resul = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.pasword);
         //console.log(resul);
         this.navCtrl.push('InformationPage');
     }
