@@ -9,7 +9,9 @@ import {Facebook} from "@ionic-native/facebook";
 import { AngularFireModule } from "angularfire2";
 import { FIREBASE_CONFIG } from './app.firebase.config';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule} from 'angularfire2/database'
 import { AuthProvider } from '../providers/auth/auth';
+import { Calendar} from '@ionic-native/calendar/ngx';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,16 @@ import { AuthProvider } from '../providers/auth/auth';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {
+      monthNames: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet' , 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
+      monthShortNames: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jui', 'Juil', 'Aou', 'Spe', 'Oct', 'Nov', 'Dec'],
+      dayNames: ['Lunid', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+      dayShortNames: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],
+    }),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+       
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -32,7 +41,9 @@ import { AuthProvider } from '../providers/auth/auth';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Facebook,
-    AuthProvider
+    AuthProvider,
+    Calendar,
+    
   ]
 })
 export class AppModule {}
