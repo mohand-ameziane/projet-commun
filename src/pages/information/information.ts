@@ -29,31 +29,11 @@ export class InformationPage {
     this.navCtrl.push('HomePage');
   }
   
-  addEventL1(){
-	this.buttonColor[0] = 'blue';
-	this.negateOtherColor(0);
+  addEventAnnee(i){
+	this.buttonColor[i] = 'blue';
+	this.negateOtherColor(i);
   }
-  
-  addEventL2(){
-	this.buttonColor[1] = 'blue';
-	this.negateOtherColor(1);
-  }                  
-  
-  addEventL3(){
-	this.buttonColor[2] = 'blue';
-	this.negateOtherColor(2);
-  }
-  
-  addEventM1(){
-	this.buttonColor[3] = 'blue';
-	this.negateOtherColor(3);
-  }
-  
-  addEventM2(){
-	this.buttonColor[4] = 'blue';
-	this.negateOtherColor(4);
-  }
-  
+
   negateOtherColor(i):void{
 	  for(var k=0;k<5;k++){
 		if(k!=i){
