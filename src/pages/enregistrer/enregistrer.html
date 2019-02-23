@@ -5,20 +5,20 @@
     <ion-card>    
 	<p id="inscriptionHeader"> Inscription </p> <br />
 	
-	<p class="label"> PSEUDO </p>
+	<p class="label"> PSEUDO<span class="asterisque">*</span> </p>
     <ion-item>
        <ion-input type="text" [(ngModel)]="user.pseudo"></ion-input>
         
     </ion-item>
       
-	 <p class="label"> EMAIL UNIVERSITAIRE </p> 
+	 <p class="label"> EMAIL UNIVERSITAIRE<span class="asterisque">*</span> </p> 
     <ion-item>
         
        <ion-input type="text" [(ngModel)]="user.email"></ion-input>
      
     </ion-item>    
       
-		<p class="label"> MOT DE PASSE </p> 	  
+		<p class="label"> MOT DE PASSE<span class="asterisque">*</span> </p> 	  
       <ion-item>
          <ion-input type="password"[(ngModel)]="user.password"></ion-input>
       </ion-item>
