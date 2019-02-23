@@ -40,9 +40,13 @@ export class LoginPage {
   }
 }
   
-  register(){
+  GoToRegister(){
     this.navCtrl.push('EnregistrerPage');
   
+  }
+  
+  GoToPasword(){
+	this.navCtrl.push('PaswordPage');
   }
 
 }
