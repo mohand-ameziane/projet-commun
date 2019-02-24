@@ -22,11 +22,10 @@
       <ion-item>
          <ion-input type="password"[(ngModel)]="user.password"></ion-input>
       </ion-item>
-    
+            <br />
+        <button ion-button id="btnNext" (click)="doRegister(user)">Suivant</button>
 
 	</ion-card>
-      
-        <br />
-        <button ion-button id="btnNext" (click)="doRegister(user)">Suivant</button>
+     
 
 </ion-content>

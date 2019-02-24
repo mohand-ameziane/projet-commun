@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { User } from '../../models/user';
 
 /**
  * Generated class for the InformationPage page.
@@ -14,10 +15,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'information.html',
 })
 export class InformationPage {
+    user = {} as User;
 	
 	public buttonColor : string[] = ['lightblue','lightblue','lightblue','lightblue','lightblue'];
 	public homme : string = 'lightblue';
 	public femme : string = 'lightblue';
+        private annee : string[]  = ['Licence 1', 'Licence 2', 'Licence 3', 'Master 1', 'Master 2'];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -54,6 +57,10 @@ export class InformationPage {
 	  
   }
   
+  register( user : User ){
+    alert(user.pseudo);
+  }
+
  
 
 }
