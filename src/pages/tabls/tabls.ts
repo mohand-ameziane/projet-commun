@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 
+
 /**
  * Generated class for the TablsPage page.
  *
@@ -19,6 +20,7 @@ export class TablsPage {
   tab2: string='MessagePage';
   tab3: string='EvenmentPage';
   tab4: string='ProfilPage';
+  tab5: string='RecherchePage';
 
   constructor() {
   }

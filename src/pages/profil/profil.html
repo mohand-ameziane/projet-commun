@@ -13,6 +13,19 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+    <div class="profile-image" (click)="Changeimage()">
+        <img src="{{avatar}}">
+      </div>
+      <div>
+        <h2 (click)="ChangeNom()">{{displayName}}</h2>
+      </div>
+      <div>
+      Appuyez sur votre nom pour le changer.
+      </div>
+
+      <div class="spacer" style="height: 10px;"></div>
+     
 
 </ion-content>

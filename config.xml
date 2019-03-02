@@ -88,4 +88,7 @@
         <variable name="APP_NAME" value="ionic application" />
         <variable name="FACEBOOK_ANDROID_SDK_VERSION" value="4.37.0" />
     </plugin>
+    <plugin name="cordova-plugin-filepath" spec="1.5.1" />
+    <plugin name="cordova-plugin-file" spec="6.0.1" />
+    <plugin name="cordova-plugin-filechooser" spec="1.2.0" />
 </widget>

@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Component , NgZone} from '@angular/core';
+import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
+import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
+import { UserProvider } from '../../providers/user/user';
+import { TablsPage } from '../tabls/tabls';
+import firebase from 'firebase';
 /**
  * Generated class for the ProfilPage page.
  *
@@ -15,11 +18,95 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ProfilPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  avatar: string;
+  displayName: string;
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public userservice: UserProvider, public zone: NgZone, public alertCtrl: AlertController,
+    public imghandler: ImghandlerProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProfilPage');
+  ionViewWillEnter() {
+    this.loaduserdetails();
+  }
+ 
+  loaduserdetails() {
+    this.userservice.getuserdetails().then((res: any) => {
+      this.displayName = res.displayName;
+      this.zone.run(() => {
+        this.avatar = res.photoURL;
+      })
+    })
   }
 
+  Changeimage(){
+    let statusalert = this.alertCtrl.create({
+      buttons: ['okay']
+    });
+    this.imghandler.uploadimage().then((url: any) => {
+      this.userservice.updateimage(url).then((res: any) => {
+        if (res.success) {
+          statusalert.setTitle('Updated');
+          statusalert.setSubTitle('Your profile pic has been changed successfully!!');
+          statusalert.present();
+          this.zone.run(() => {
+          this.avatar = url;
+        })  
+        }  
+      }).catch((err) => {
+          statusalert.setTitle('Failed');
+          statusalert.setSubTitle('Your profile pic was not changed');
+          statusalert.present();
+      })
+      })
+  }
+ 
+  ChangeNom() {
+    let statusalert = this.alertCtrl.create({
+      buttons: ['okay']
+    });
+    let alert = this.alertCtrl.create({
+      title: 'Edit Nickname',
+      inputs: [{
+        name: 'nickname',
+        placeholder: 'Nickname'
+      }],
+      buttons: [{
+        text: 'Cancel',
+        role: 'cancel',
+        handler: data => {
+ 
+        }
+      },
+      {
+        text: 'Edit',
+        handler: data => {
+          if (data.nickname) {
+            this.userservice.updatedisplayname(data.nickname).then((res: any) => {
+              if (res.success) {
+                statusalert.setTitle('Updated');
+                statusalert.setSubTitle('Your nickname has been changed successfully!!');
+                statusalert.present();
+                this.zone.run(() => {
+                  this.displayName = data.nickname;
+                })
+              }
+ 
+              else {
+                statusalert.setTitle('Failed');
+                statusalert.setSubTitle('Your nickname was not changed');
+                statusalert.present();
+              }
+                             
+            })
+          }
+        }
+        
+      }]
+    });
+    alert.present();
+  }
+ 
+  
+ 
+  
 }

@@ -14,6 +14,21 @@
 
 
 <ion-content padding>
+
+    <div class="profile-image">
+        <img src="{{imgurl}}">
+      </div>
+      <div>
+        <button ion-button round outline (click)="chooseimage()">choisir une image </button>
+      </div>
+      
+      <div [hidden]="moveon">
+        <button ion-button round outline (click)="updateproceed()"> Télécharger et continuer</button>
+      </div>
+    
+
+
+
     <ion-list>
     
         <ion-item>
@@ -33,6 +48,8 @@
       </ion-list>
       
       
-      <button ion-button round (click)="allepageinformation()">valide mes Information </button>
+      <div [hidden]="!moveon">
+          <button ion-button round outline (click)="proceed()">passé a l'etape suivante </button>
+        </div>
 
 </ion-content>
