@@ -14,8 +14,8 @@ import firebase from 'firebase';
 */
 @Injectable()
 export class RequestsProvider {
-  firereq = firebase.database().ref('/requests');
-  firefriends = firebase.database().ref('/friends');
+  firereq = firebase.database().ref('/invetation');
+  firefriends = firebase.database().ref('/amis');
   userdetails;
   myfriends;
 
@@ -83,7 +83,7 @@ acceptrequest(buddy) {
   })
   return promise;
 }
-// la methode suprime un etulisitaeur a notre base de donnée
+// supprime l'invertation apres avoir accepete ou seprimme
 deleterequest(buddy) {
   var promise = new Promise((resolve, reject) => {
    this.firereq.child(firebase.auth().currentUser.uid).orderByChild('sender').equalTo(buddy.uid).once('value', (snapshot) => {

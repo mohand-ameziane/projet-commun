@@ -2,8 +2,6 @@ import { Component , NgZone} from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 import { UserProvider } from '../../providers/user/user';
-import { TablsPage } from '../tabls/tabls';
-import firebase from 'firebase';
 /**
  * Generated class for the ProfilPage page.
  *

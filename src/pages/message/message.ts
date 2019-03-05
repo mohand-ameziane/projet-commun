@@ -66,7 +66,7 @@ export class MessagePage {
       alert(err);
     })
   }
-
+// appre avoir accepte l'invetation tu peux commance de chaté avec 
   buddychat(buddy) {
     this.chatservice.initializebuddy(buddy);
     this.navCtrl.push('ReadMessagePage');

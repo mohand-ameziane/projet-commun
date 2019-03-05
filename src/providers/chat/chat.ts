@@ -11,7 +11,7 @@ import { Events } from 'ionic-angular';
 //forniseur des message 
 @Injectable()
 export class ChatProvider {
-  firebuddychats = firebase.database().ref('/buddychats');
+  firebuddychats = firebase.database().ref('/message');
   buddy: any;
   buddymessages = [];
   constructor(public events: Events) {
@@ -21,7 +21,8 @@ export class ChatProvider {
   initializebuddy(buddy) {
     this.buddy = buddy;
   }
- 
+  
+ // envoi un message il va l'enregistre dans la base de donnes 
   addnewmessage(msg) {
     if (this.buddy) {
       var promise = new Promise((resolve, reject) => {
@@ -44,7 +45,7 @@ export class ChatProvider {
       return promise;
     }
   }
- 
+ // recuperation le message enregestre dans la base de donnée
   getbuddymessages() {
     
     let temp;
