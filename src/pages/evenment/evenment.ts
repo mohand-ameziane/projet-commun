@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import * as firebase from 'firebase';
 
 
 
@@ -10,6 +11,8 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 })
 export class EvenmentPage {
 
+  items;
+  ref = firebase.database().ref('items/');
   constructor(
       private modalControler: ModalController
       ){

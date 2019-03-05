@@ -1,7 +1,11 @@
+import { FIREBASE_CONFIG } from './../../app/app.firebase.config';
 import { EvenmentPage } from './../evenment/evenment';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController, Item, Modal } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, normalizeURL } from 'ionic-angular';
 import { AngularFireDatabase, AngularFireList } from "angularfire2/database";
+import { ToastController } from 'ionic-angular';
+
+
 /**
  * Generated class for the ModalPage page.
  *
@@ -22,24 +26,26 @@ export class ModalPage {
  DescEvent = '';
 
  events: AngularFireList<any>;
+  
 
  
   constructor(private navParams: NavParams, 
     private view: ViewController, 
     public navCtrl: NavController, 
-    public af: AngularFireDatabase,) {
+    public af: AngularFireDatabase,
+    public toastCtrl: ToastController,
+  )
+   
+    {
       this.events = af.list('/events')
-    
-  
-    
-    let aDate = new Date();
-    aDate.setHours(aDate.getHours() - (aDate.getTimezoneOffset() / 60));
-    this.maxDateOfPicker = aDate.toISOString();
-    this.dateOfEvent = aDate.toISOString();
+      let aDate = new Date();
+      aDate.setHours(aDate.getHours() - (aDate.getTimezoneOffset() / 60));
+      this.maxDateOfPicker = aDate.toISOString();
+      this.dateOfEvent = aDate.toISOString();
 
-    aDate.setHours(aDate.getHours()-5)
-    this.minDateOfPicker = aDate.toISOString();
-  }
+      aDate.setHours(aDate.getHours()-5)
+      this.minDateOfPicker = aDate.toISOString();
+    }
 
   addEvent(TitreEv, DescEvent, dateOfEvent){
     this.events.push({
@@ -51,20 +57,22 @@ export class ModalPage {
     }).then(newEvent => {
       this.navCtrl.push(EvenmentPage);
     })
+    const toast = this.toastCtrl.create({
+      message: 'Événement ajouté',
+      duration: 100
+    });
+    toast.present();
   }
 
+ 
 
 
+
+//https://www.youtube.com/watch?v=dth3aq_QPzU
 
   closeModal(){
     this.view.dismiss();
   }
-/*
-   addItem(item: Item){
-    this.event.addEvent(item).then(ref => {
-      console.log(ref.key);
-    })
-  }*/
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModalPage');
   }

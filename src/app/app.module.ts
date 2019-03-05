@@ -12,6 +12,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule} from 'angularfire2/database'
 import { AuthProvider } from '../providers/auth/auth';
 import { Calendar} from '@ionic-native/calendar/ngx';
+import {storage, initializeApp } from 'firebase';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { Calendar} from '@ionic-native/calendar/ngx';
   providers: [
     StatusBar,
     SplashScreen,
+    
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Facebook,
     AuthProvider,
