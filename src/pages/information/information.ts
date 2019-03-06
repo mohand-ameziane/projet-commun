@@ -18,9 +18,8 @@ export class InformationPage {
     user = {} as User;
 	
 	public buttonColor : string[] = ['lightblue','lightblue','lightblue','lightblue','lightblue'];
-	public homme : string = 'lightblue';
-	public femme : string = 'lightblue';
-        private annee : string[]  = ['Licence 1', 'Licence 2', 'Licence 3', 'Master 1', 'Master 2'];
+	public sexeColor : string[] = [ 'lightblue','lightblue' ];
+  private annee : string[]  = ['Licence 1', 'Licence 2', 'Licence 3', 'Master 1', 'Master 2'];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -32,33 +31,19 @@ export class InformationPage {
     this.navCtrl.push('HomePage');
   }
   
-  addEventAnnee(i){
-	this.buttonColor[i] = 'blue';
-	this.negateOtherColor(i);
+  addEvent(i, tab) :void{
+	  tab[i] = 'blue';
+	  this.negateOtherColor(i,tab);
   }
 
-  negateOtherColor(i):void{
-	  for(var k=0;k<5;k++){
+  negateOtherColor(i, tab):void{
+	  for(var k=0;k<tab.length;k++){
 		if(k!=i){
-			this.buttonColor[k]='lightblue';
+			tab[k]='lightblue';
 		}
 	  }
   }
-  
-  
-  addEventHomme(){
-	this.homme='blue';
-	this.femme='lightblue';
-  }
-  
-  addEventFemme(){
-	this.femme='blue';
-	this.homme='lightblue';
-	  
-  }
-  
   register( user : User ){
-    alert(user.pseudo);
   }
 
  

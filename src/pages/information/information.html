@@ -18,16 +18,16 @@
     </ion-item>    
 		<br />
 		<p class="label"> ANNEE D'ETUDE<span class="asterisque">*</span> </p> 	  
-		<button ion-button id="annee1" (click)="addEventAnnee(0)"[ngStyle]="{'background-color': buttonColor[0]}">L1</button>
-		<button ion-button class="annee" (click)="addEventAnnee(1);" [ngStyle]="{'background-color': buttonColor[1] }">L2</button>
-		<button ion-button class="annee" (click)="addEventAnnee(2);" [ngStyle]="{'background-color': buttonColor[2] }">L3</button>
-		<button ion-button class="annee" (click)="addEventAnnee(3);" [ngStyle]="{'background-color': buttonColor[3] }">M1</button>
-		<button ion-button class="annee" (click)="addEventAnnee(4);" [ngStyle]="{'background-color': buttonColor[4] }">M2</button>
+		<button ion-button id="annee1" (click)="addEvent(0,buttonColor)"[ngStyle]="{'background-color': buttonColor[0]}">L1</button>
+		<button ion-button class="annee" (click)="addEvent(1,buttonColor);" [ngStyle]="{'background-color': buttonColor[1] }">L2</button>
+		<button ion-button class="annee" (click)="addEvent(2,buttonColor);" [ngStyle]="{'background-color': buttonColor[2] }">L3</button>
+		<button ion-button class="annee" (click)="addEvent(3,buttonColor);" [ngStyle]="{'background-color': buttonColor[3] }">M1</button>
+		<button ion-button class="annee" (click)="addEvent(4,buttonColor);" [ngStyle]="{'background-color': buttonColor[4] }">M2</button>
 	
 		<br /><br />
 		<p class="label"> SEXE<span class="asterisque">*</span> </p>
-		<button ion-button id="homme"(click)="addEventHomme()" [ngStyle]="{'background-color': homme}">HOMME</button>
-		<button ion-button id="femme" (click)="addEventFemme()" [ngStyle]="{'background-color': femme}">FEMME</button>
+		<button ion-button id="homme"(click)="addEvent(0,sexeColor)" [ngStyle]="{'background-color': sexeColor[0] }">HOMME</button>
+		<button ion-button id="femme" (click)="addEvent(1,sexeColor)" [ngStyle]="{'background-color': sexeColor[1]}">FEMME</button>
 		
 		
 		<br /> <br /> <br />

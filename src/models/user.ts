@@ -1,9 +1,16 @@
 export interface User{
     email : string;
     pasword : string;
-    pseudo : string;
+    displayName : string;
     universite : string;
     filiere : string;
-    annee : string;
+    anneeetude : string;
+    sexe: string;
+    ville: string;
+    horaire: string;
+    avatar : string;
+    personnalite: string;
+    association : string;
+
     
 }
