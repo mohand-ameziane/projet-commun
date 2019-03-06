@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, ModalController } from 'ionic-angular';
+import firebase from 'firebase';
+import { UserProvider } from '../../providers/user/user';
 
-/**
- * Generated class for the EvenmentPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
+
 
 @IonicPage()
 @Component({
@@ -14,12 +12,28 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'evenment.html',
 })
 export class EvenmentPage {
+  //tableu liste des evenment  
+  filteredusers = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  items;
+  ref = firebase.database().ref('items/');
+  constructor( public navCtrl: NavController ,private modalControler: ModalController, 
+               public userservice: UserProvider)
+  {
+    this.userservice.getToutEvenment().then((res: any) => {
+      this.filteredusers = res;
+      
+   })
+
   }
+      ionViewDidLoad() {
+        console.log('ionViewDidLoad EvenmentPage');
+      }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad EvenmentPage');
-  }
 
+presentModal(){
+  const MyModal = this.modalControler.create('ModalPage');
+  MyModal.present();
+
+}
 }

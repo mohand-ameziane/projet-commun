@@ -1,4 +1,5 @@
 export interface User{
+    pseudo : string;
     email : string;
     pasword : string;
     displayName : string;
@@ -10,7 +11,5 @@ export interface User{
     horaire: string;
     avatar : string;
     personnalite: string;
-    association : string;
-
-    
+    association : string;    
 }

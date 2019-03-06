@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from "../../models/user";
 import { AngularFireAuth } from "angularfire2/auth";
+import { AuthProvider } from "../../providers/auth/auth";
+import { RenMotPassePage } from '../ren-mot-passe/ren-mot-passe';
 import { HomePage } from '../home/home';
 
 /**
@@ -20,33 +22,23 @@ export class LoginPage {
 
   user = {} as User;
 
-  constructor(private afAuth : AngularFireAuth,
+  constructor(public authservic : AuthProvider,
     public navCtrl: NavController, public navParams: NavParams) {
   }
   
   
 
-
- async login(user : User){
-   try{
-    const resul= this.afAuth.auth.signInWithEmailAndPassword(user.email,  user.pasword);
-    console.log(resul);
-    if(resul){
-    this.navCtrl.setRoot('HomePage');
-  }
-  }
-  catch(e){
-    console.error(e);
-  }
+login(){
+  this.authservic.login(this.user).then((res: any)=>{
+     if(!res.code){
+      this.navCtrl.setRoot('TablsPage'); 
+     }
+  })
 }
-  
-  GoToRegister(){
-    this.navCtrl.push('EnregistrerPage');
-  
-  }
-  
-  GoToPasword(){
-	this.navCtrl.push('PaswordPage');
+
+
+  valide(){
+    this.navCtrl.push('PaswordPage');
   }
 
 }
