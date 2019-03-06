@@ -1,6 +1,7 @@
-page-enregistrer {
-    
-    //Desactiver le soulignement par défaut
+page-pasword {
+
+
+	//Desactiver le soulignement par défaut
     .item-md.item-block .item-inner,
 .item-md.item-input.input-has-focus .item-inner,
 .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner,
@@ -15,55 +16,47 @@ page-enregistrer {
 .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner,
 .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child .item-inner {
     box-shadow: none; 
-}
+	}
 
-    ion-content{
-        background-color: lightblue !important;
-        
-        ion-card{
-            position:absolute;
-            top:50px;
-            height:70% !important;
-            width:85% !important;
-			border-right:solid 12px rgb(72,138,255);
-        }
-        
-        #btnNext{
-            position:absolute;
-            right: 10% !important;
-            width:110px;
-            
-        }
-        
-        ion-item{
+	ion-content{
+		background-color:lightblue !important;
+		ion-card{
+			position:absolute !important;
+			top:10% !important;
+			height:50% !important;
+			width:90% !important;
+		}
+	
+		#header{
+			text-align:center;
+			font-size:22px;
+			color:blue;
+			font-weight:bold;
+			margin-top:5%;
+			margin-bottom:4%;
+		}
+		
+		#contenu{
+			text-align:center;
+			color:gray;
+			margin-bottom:6% !important;
+		}
+		
+		ion-item{
             border:none;
             border-radius:3px;
-            margin-bottom:10px !important;
-            height: 10px !important;
+            margin-bottom:3% !important;
+            height: 10% !important;
             background-color: #f1f1f1 !important;
             width:80% !important;
             position:absolute;
             left:10%;
         }
-        
-		#inscriptionHeader{
-			font-size:22px;
-			color:blue;
-			margin-left:10%;
-			margin-top:10%;
-			font-weight:bold;
-			}
-        
-		.label{
-			margin-left:10%;
-			font-size:14px;
-			font-family: "Calibri",  monospace;
-			letter-spacing: 2px;
-			color:gray;
-			}
-			
-		.asterisque{
-			color:red;
-		}	
-    }     
+		
+		#submit{
+			position:absolute;
+			left:20%;
+		}
+		
+	}
 }

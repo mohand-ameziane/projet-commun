@@ -1,32 +1,27 @@
-<!--
-  Generated template for the LoginPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar color='primary'>
-    <ion-title>login</ion-title>
-  </ion-navbar>
-
-</ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="content">
+   
+
 <ion-item>
-  <ion-label floating> Email Adresse</ion-label>
-    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    <ion-label class="test"> <ion-icon name="person"> </ion-icon> </ion-label>
+    <ion-input type="text" placeholder="Pseudo" [(ngModel)]="user.email"></ion-input>
   
 </ion-item>
 
 <ion-item>
-    <ion-label floating> password</ion-label> 
-      <ion-input type="pasword" [(ngModel)]="user.pasword"></ion-input>
-    
-  </ion-item>
+    <ion-label> <ion-icon name="lock"> </ion-icon> </ion-label>
+    <ion-input type="password" placeholder="Mot de passe" [(ngModel)]="user.pasword"></ion-input>
+        
+</ion-item>
+    <br />
+  <button ion-button (click)="login(user)" style="width:90%">Connexion</button>
 
-  <button ion-button (click)="login(user)">Login</button>
-  <button ion-button (click)="register()">enregistre</button>
-  <button ion-button (click)="valide()">Modefier mot passe </button>
+  <div class="footer">
+    <p (click)="register()">Vous n'avez pas de compte ?</p>
+    <p (click)="valide()" id="forgot">Mot de passe oublié ?</p>
+  </div>
+  
 </ion-content>
+
+

@@ -4,7 +4,7 @@ import { User } from "../../models/user";
 import { AngularFireAuth } from "angularfire2/auth";
 import { AuthProvider } from "../../providers/auth/auth";
 import { RenMotPassePage } from '../ren-mot-passe/ren-mot-passe';
-
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the LoginPage page.
@@ -25,6 +25,8 @@ export class LoginPage {
   constructor(public authservic : AuthProvider,
     public navCtrl: NavController, public navParams: NavParams) {
   }
+  
+  
 
 login(){
   this.authservic.login(this.user).then((res: any)=>{
@@ -33,13 +35,10 @@ login(){
      }
   })
 }
-  
-  register(){
-    this.navCtrl.push('EnregistrerPage');
-  
-  }
+
+
   valide(){
-    this.navCtrl.push('RenMotPassePage');
+    this.navCtrl.push('PaswordPage');
   }
 
 }
