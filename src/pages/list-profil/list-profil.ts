@@ -17,7 +17,7 @@ import { UserProvider } from '../../providers/user/user';
 export class ListProfilPage {
    //filtrage de utilistaeur un tableu 
    filteredusers = [];
-   temparr = [];
+   
  
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -26,7 +26,7 @@ export class ListProfilPage {
    // stocké le resultae de cette methode dans deux tableau defirenat 
    this.userservice.getallusers().then((res: any) => {
     this.filteredusers = res;
-    this.temparr = res;
+    
  })
   }
 
@@ -34,19 +34,6 @@ export class ListProfilPage {
     console.log('ionViewDidLoad ListProfilPage');
   }
 
-  searchuser(searchbar) {
-    this.filteredusers = this.temparr;
-    var q = searchbar.target.value;
-    if (q.trim() == '') {
-      return;
-    }
  
-    this.filteredusers = this.filteredusers.filter((v) => {
-      if (v.displayName.toLowerCase().indexOf(q.toLowerCase()) > -1) {
-        return true;
-      }
-      return false;
-    })
-  }
 
 }

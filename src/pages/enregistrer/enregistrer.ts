@@ -40,10 +40,10 @@ export class EnregistrerPage {
       toaster.present();
     }
     
-    else if(this.newuser.email.length<6){
-      toaster.setMessage('Password is not strong. Try giving more than six characters');
-      toaster.present();
-    }
+   // else if(this.newuser.email.includes('@univ-paris1.fr') ){
+   //   toaster.setMessage('Password is not strong. Try giving more than six characters');
+   //   toaster.present();
+   // }
     else{
       let loader=this.loadingCtrl.create({
         content: 'nik ta mere'
