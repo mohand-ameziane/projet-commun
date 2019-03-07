@@ -14,6 +14,7 @@ import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 @Component({
   selector: 'page-readmessage',
   templateUrl: 'readmessage.html',
+
 })
 export class ReadMessagePage {
 

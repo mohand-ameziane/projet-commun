@@ -59,19 +59,4 @@ export class EnregistrerPage {
     }
   }
 
-
-
-
-
- // async register(user : User){
-  //  try{
- //   const resul = await this.afAuth.auth.createUserWithEmailAndPassword(user.email, user.pasword);
-  //  console.log(resul);
-  //  this.navCtrl.push('InformationPage');
- // }
- // catch(e){
-  //  console.error(e);
- // }
- // }
-
 }

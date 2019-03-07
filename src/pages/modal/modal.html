@@ -17,14 +17,8 @@
 
 
 <ion-content padding>
-
     <ion-list>
 
-        <ion-item>
-            <ion-label floating>Titre de l'évenement</ion-label>
-            <ion-input type="text" [(ngModel)]="TitreEv"></ion-input>
-          </ion-item>
-          <br>
         <ion-item>
           <ion-label floating>Titre de l'évenement</ion-label>
           <ion-input type="text" [(ngModel)]="TitreEv"></ion-input>
@@ -47,9 +41,9 @@
         <br>
        </ion-list>
     
-    <button ion-button (click)=openImagePicker()> ajoute image </button>
+    <button ion-button (click)=openImagePicker()></button>
     <button ion-button (click)="addEvent(TitreEv, DescEvent, dateOfEvent)">Creer
       </button>
-
+   
 
 </ion-content>

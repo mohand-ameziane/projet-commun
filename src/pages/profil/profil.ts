@@ -26,7 +26,7 @@ export class ProfilPage {
   ionViewWillEnter() {
     this.loaduserdetails();
   }
- 
+ // utilisateur 
   loaduserdetails() {
     this.userservice.getuserdetails().then((res: any) => {
       this.displayName = res.displayName;
