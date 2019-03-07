@@ -1,0 +1,42 @@
+<!--
+  Generated template for the CriteresPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Critères de recherche <ion-icon name="checkmark"></ion-icon></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <label class="label"> Année d'étude :</label>
+    <ion-range min="1" max="5" step="1" snaps="true" pin="true"></ion-range>
+
+    <br />
+
+    <label class="label"> Université : </label>
+    <ion-card>
+      <ion-input type="text" placeholder="Ex: Paris 1 Sorbonne..."></ion-input>
+    </ion-card>
+
+    <br />
+
+  <label class="label"> Sexe : </label> <br /><br />
+  <button ion-button outline> Homme </button>
+  <button ion-button outline> Femme </button>
+  <button ion-button outline> N'importe </button>
+
+  <br /> <br />
+
+  <label class="label"> Ville : </label>
+  <ion-card>
+    <ion-input type="text" placeholder="Ex: Saint-Ouen... (uniquement si l'utilisateur l'a rempli)"></ion-input>
+  </ion-card>
+
+</ion-content>

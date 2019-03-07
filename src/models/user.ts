@@ -1,5 +1,6 @@
 export interface User{
     email : string;
+    pseudo : string;
     pasword : string;
     displayName : string;
     universite : string;
