@@ -32,21 +32,21 @@ export class EnregistrerPage {
       position: 'bottom'
     });
     if(this.newuser.email=='' || this.newuser.pasword=='' || this.newuser.name==''){
-       toaster.setMessage('a thafka');
+       toaster.setMessage('Veuillez entrer des données valides');
        toaster.present();
     }
     else if(this.newuser.pasword.length<7){
-      toaster.setMessage('Password is not strong. Try giving more than six characters');
+      toaster.setMessage('Votre mot de passe doit contenir au moins 6 caractères');
       toaster.present();
     }
-    
-   // else if(this.newuser.email.includes('@univ-paris1.fr') ){
-   //   toaster.setMessage('Password is not strong. Try giving more than six characters');
-   //   toaster.present();
-   // }
+
+   else if(!this.newuser.email.includes('@univ-paris1.fr') ){
+        toaster.setMessage('Merci de donner votre Email Universitaire');
+        toaster.present();
+    }
     else{
       let loader=this.loadingCtrl.create({
-        content: 'nik ta mere'
+        content: 'Chargement'
       });
         loader.present();
      this.userservice.ajouteuser(this.newuser).then((res: any)=>{
