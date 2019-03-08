@@ -1,0 +1,94 @@
+<ion-header>
+
+  <ion-navbar color="custome">
+    <ion-title text-center> Profil </ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!--CARD correspond au cadre -->
+
+  <ion-item>
+    <!-- IMAGE PROFIL -->
+    <ion-avatar>
+      <img src="./assets/imgs/avatar.png" class="avatar">
+    </ion-avatar>
+
+  </ion-item>
+
+  <ion-card>
+
+    <p text-center> Name: </p>
+    <p text-center (click)="editname()">
+      {{displayName}}
+    </p>
+
+    <p text-center>
+      Universite:
+    </p>
+
+    <p text-center>
+      {{universite}}
+    </p>
+
+    <p text-center>
+      Filiere:
+    </p>
+
+    <p text-center (click)="editFiliere()">
+      {{filiere}}
+    </p>
+
+    <p text-center>
+      Année d'étude:
+    </p>
+
+    <p text-center>
+      {{anneeetude}}
+    </p>
+
+    <p text-center>
+      Sexe:
+    </p>
+
+    <p text-center>
+      {{sexe}}
+    </p>
+
+  </ion-card>
+
+
+
+  <ion-card-content >
+
+
+    <ion-buttons class="btn" *ngIf="this.isAuth">
+      <button ion-button>
+        <ion-icon name="mail"> Envoie lui un message ! </ion-icon>
+      </button>
+
+    </ion-buttons>
+
+  </ion-card-content>
+
+
+
+  <ion-list>
+
+    <ion-item>
+      <p text-center>  <ion-icon name="alert"> </ion-icon> En savoir plus</p>
+    </ion-item>
+
+
+
+    <ion-item>
+      <p text-center>Plus à venir</p>
+      <p text-center> ...</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
