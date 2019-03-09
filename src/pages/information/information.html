@@ -21,19 +21,19 @@
  
  
      <div class="profile-image">
-         <img src="{{imgurl}}">
+         <img class="profile-image"  src="{{imgurl}}">
        </div>
        
        <div>
-         <button ion-button round outline (click)="chooseimage()">choisir une image </button>
+         <button ion-button  (click)="chooseimage()" style="width:90%">choisir une image </button>
        </div>
        
        <div [hidden]="moveon">
-         <button ion-button round outline (click)="updateproceed()"> Télécharger et continuer</button>
+         <button ion-button (click)="updateproceed()" style="width:90%"> Télécharger et continuer</button>
        </div>
        
        <div [hidden]="!moveon">
-           <button ion-button round outline (click)="proceed()">passé a l'etape suivante </button>
+           <button ion-button (click)="proceed()" style="width:90%">passé a l'etape suivante </button>
          </div>
  
  </ion-content>

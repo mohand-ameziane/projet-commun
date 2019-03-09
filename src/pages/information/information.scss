@@ -1,4 +1,28 @@
 page-information {
-
+    border-bottom: none;
+    box-shadow: none;
+    ion-content{
+        background-color: lightblue !important;
+        
+        ion-card{
+            position:absolute;
+            top:30px;
+            height:85% !important;
+            width:85% !important;
+		
+        }
+    }
+    #btnNext{
+        position:absolute;
+        right: 10% !important;
+        width:110px;
+        
+    }
+    .profile-image{
+        width: 315px;
+        height: 315px;
+        
+    }
 
 }
+
