@@ -11,21 +11,31 @@
   </ion-navbar>
 
 </ion-header>
-
-
 <ion-content>
 
     <div class="profile-image" (click)="Changeimage()">
-        <img src="{{avatar}}">
+        <img src="assets/imgs/b-images.jpg">
       </div>
+
       <div>
         <h2 (click)="ChangeNom()">{{displayName}}</h2>
       </div>
+
       <div>
-      Appuyez sur votre nom pour le changer.
+          <h2 >{{filiername}}</h2>
+        </div>
+    <div>
+      <h2 >{{universitename}}</h2>
+    </div>
+    
+      <div>
+          Appuyez sur votre nom pour le changer.
       </div>
 
-      <div class="spacer" style="height: 10px;"></div>
+
+      
+   
+         
      
 
 </ion-content>

@@ -2,7 +2,7 @@ import { Component , NgZone} from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 import { UserProvider } from '../../providers/user/user';
-import { TablsPage } from '../tabls/tabls';
+
 /**
  * Generated class for the InformationPage page.
  *

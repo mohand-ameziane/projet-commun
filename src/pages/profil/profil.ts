@@ -15,16 +15,23 @@ import { UserProvider } from '../../providers/user/user';
   templateUrl: 'profil.html',
 })
 export class ProfilPage {
+  
 
   avatar: string;
   displayName: string;
-  constructor(public navCtrl: NavController, public navParams: NavParams,
-    public userservice: UserProvider, public zone: NgZone, public alertCtrl: AlertController,
+  universitename: string;
+  filiername: string;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public userservice: UserProvider, 
+     public zone: NgZone, public alertCtrl: AlertController,
     public imghandler: ImghandlerProvider) {
+
+     
   }
 
   ionViewWillEnter() {
     this.loaduserdetails();
+    this.load();
+    this.loadt();
   }
  // utilisateur 
   loaduserdetails() {
@@ -33,6 +40,16 @@ export class ProfilPage {
       this.zone.run(() => {
         this.avatar = res.photoURL;
       })
+    })
+  }
+  load() {
+    this.userservice.getuserdetails().then((res: any) => {
+      this.universitename= res.universitename;    
+    })
+  }
+  loadt() {
+    this.userservice.getuserdetails().then((res: any) => {
+      this.filiername= res.filiername; 
     })
   }
 

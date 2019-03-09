@@ -18,20 +18,27 @@
       <ion-list>
         <ion-item-sliding *ngFor="let key of filteredusers">
           <ion-item >
-            <ion-avatar item-left>
-              <img src="{{key.photoURL}}">
-            </ion-avatar>
+            <ion-card> 
+           <img class="profile-image" src="assets/imgs/b-images.jpg">
+           
+           <ion-list lines>
             <h2>{{key.displayName}}</h2>
-          </ion-item>
-          <ion-item-options slide="left">
-            <button ion-button color="primary" (click)="sendreq(key)">
+            <h2>{{key.universitename}}</h2>
+            <h2>{{key.filiername }}</h2>
+          </ion-list>
+          <button ion-button color="primary" (click)="sendreq(key)">
               <ion-icon name="person-add"></ion-icon>
               Add
             </button>
-          </ion-item-options>
-          
+            
+            </ion-card>
+          </ion-item>
         </ion-item-sliding>
       </ion-list>
     </ion-list>
+
+
+
+
 
 </ion-content>

@@ -1,11 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, ToastController} from 'ionic-angular';
-import { User } from '../../models/user';
-import { AngularFireAuth } from "angularfire2/auth";
-import { InformationPage } from '../information/information';
 import { UserProvider } from "../../providers/user/user";
-import { HomePage } from '../home/home';
-import { TablsPage } from '../tabls/tabls';
+
 
 @IonicPage()
 @Component({
@@ -13,16 +9,16 @@ import { TablsPage } from '../tabls/tabls';
   templateUrl: 'enregistrer.html',
 })
 export class EnregistrerPage {
- // user = {} as User;
  newuser = {
   email:'',
   pasword:'',
-  name:''
-  
-} 
+  name: '',
+  universite : '',
+  filier:'',
+}
+ 
 
-  constructor(//private afAuth :AngularFireAuth,
-              public navCtrl: NavController, public navParams: NavParams, public userservice: UserProvider,
+  constructor(public navCtrl: NavController, public navParams: NavParams, public userservice: UserProvider,
               public loadingCtrl :LoadingController, public toastCtrl: ToastController ) {
   }
   
