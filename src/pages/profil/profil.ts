@@ -120,7 +120,7 @@ export class ProfilPage {
     });
     alert.present();
   }
- 
+  
   
  
   

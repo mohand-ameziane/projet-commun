@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
 /**
- * Generated class for the ConnecterPage page.
+ * Generated class for the ConfirmEmailPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +11,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-connecter',
-  templateUrl: 'connecter.html',
+  selector: 'page-confirm-email',
+  templateUrl: 'confirm-email.html',
 })
-export class ConnecterPage {
+export class ConfirmEmailPage {
+
+  private us;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.us = navParams.get('us');
+    this.us.sendEmailVerification();
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ConnecterPage');
+    console.log('ionViewDidLoad ConfirmEmailPage');
   }
+  
 
 }

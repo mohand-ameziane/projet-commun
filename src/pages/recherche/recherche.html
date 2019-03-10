@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="hcolor">
-    <ion-title>Recherche</ion-title>
+    <ion-title>List des Profil</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -21,17 +21,19 @@
           <ion-item-sliding *ngFor="let key of filteredusers">
             <ion-item >
               <ion-card> 
-                <!--   <img class="profile-image"   src="{{key.photoURL}}">  -->
-               
-                <img class="profile-image" src="assets/imgs/b-images.jpg"> 
-                <button expand="block" ion-button color="primary" (click)="sendreq(key)">
-                  <ion-icon name="person-add"></ion-icon>
-                  Add
-                </button>  
+                <!-- <img class="profile-image" src="assets/imgs/b-images.jpg">    -->
+                <img class="profile-image"   src="{{key.photoURL}}">
+                <br />
+                    <button ion-button (click)="sendreq(key)"> Demandez d'ouvrir une discussion ! </button>
+                    
+
              <ion-list lines>
-              <h2>{{key.displayName}}</h2>
-              <h2>{{key.universitename}}</h2>
-              <h2>{{key.filiername }}</h2>
+              
+              <h2>Nom  {{key.displayName}}</h2>
+              
+              <h2>Universite  {{key.universitename}}</h2>
+              
+              <h2>Formation  {{key.filiername }}</h2>
             </ion-list>
            
               
