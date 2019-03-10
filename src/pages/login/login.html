@@ -13,8 +13,8 @@
     <img src="./assets/imgs/unir.png" class="logo">
     
 <ion-item>
-    <ion-label class="test"> <ion-icon name="person"> </ion-icon> </ion-label>
-    <ion-input type="text" placeholder="Pseudo" [(ngModel)]="user.email"></ion-input>  
+    <ion-label class="test"><ion-icon name="mail"></ion-icon> </ion-label>
+    <ion-input type="text" placeholder="Email Universitaire" [(ngModel)]="user.email"></ion-input>
 </ion-item>
 
 <ion-item>
@@ -25,10 +25,9 @@
   <br />
   <button ion-button (click)="login(user)" style="width:90%">Connexion</button>
 
-  <div class="footer">
-      <p (click)="register()" id="forgot">Vous n'avez pas de compte ?</p>
-      <p (click)="valide()" id="forgo">Mot de passe oublié ?</p>
-    </div>
+      <p (click)="register()" id="register">Vous n'avez pas de compte ?</p>
+      <p (click)="valide()" id="forgot">Mot de passe oublié ?</p>
+
 </ion-content>
 
 

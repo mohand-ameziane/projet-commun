@@ -27,7 +27,7 @@ export class EnregistrerPage {
       duration: 3000,
       position: 'bottom'
     });
-    if(this.newuser.email=='' || this.newuser.pasword=='' || this.newuser.name==''){
+    if(this.newuser.email=='' || this.newuser.pasword=='' || this.newuser.name=='' || this.newuser.universite=='' || this.newuser.filier ==''){
        toaster.setMessage('Veuillez entrer des données valides');
        toaster.present();
     }
@@ -35,10 +35,10 @@ export class EnregistrerPage {
       toaster.setMessage('Votre mot de passe doit contenir au moins 6 caractères');
       toaster.present();
     }
-    else if(!this.newuser.email.includes('@univ-paris1.fr') ){
+    /*else if(!this.newuser.email.includes('@univ-paris1.fr') ){
       toaster.setMessage('Merci de donner votre Email Universitaire');
       toaster.present();
-  }
+  }*/
 
    
     else{

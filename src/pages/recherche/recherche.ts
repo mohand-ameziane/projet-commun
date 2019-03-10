@@ -79,4 +79,8 @@ export class RecherchePage {
     }
   }
 
+  goToCriteres(){
+    this.navCtrl.push('CriterePage');
+  }
+
 }
