@@ -36,16 +36,23 @@ page-login {
    
     .content{
         position:absolute;
-        top:20%;
+        top:00%;
         left:5%;
         background-color:lightblue;
             
     }
-    
-    #forgot{
+    h1 {
+        font-family: "PT Mono";
+        font-size: 25px;
         
-        margin-left:20px;
-    }
+      }
+      .logo {
+        margin-top: 5%;
+        margin-left: -4%;
+  
+      }
+    
+  
     
     #pass{
       
@@ -60,5 +67,16 @@ page-login {
         color:#488aff;
         text-decoration:underline;
     }
+
+    #forgot{
+        margin-top: 50px;
+        margin-left:10px;
+    }
+    #forgo{
+        margin-top: 00px;
+        margin-left:20px;
+        
+    }
+   
 
 }

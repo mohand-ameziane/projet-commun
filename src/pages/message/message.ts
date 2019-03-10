@@ -26,11 +26,13 @@ export class MessagePage {
   ionViewWillEnter() {
     this.requestservice.getmyrequests();
     this.requestservice.getmyfriends();
+
     this.myfriends = [];
     this.events.subscribe('gotrequests', () => {
       this.myrequests = [];
       this.myrequests = this.requestservice.userdetails;
     })
+    
     this.events.subscribe('friends', () => {
       this.myfriends = [];
       this.myfriends = this.requestservice.myfriends; 
@@ -51,13 +53,15 @@ export class MessagePage {
     this.requestservice.acceptrequest(item).then(() => {
  
       let newalert = this.alertCtrl.create({
-        title: 'Friend added',
-        subTitle: 'Tap on the friend to chat with him',
-        buttons: ['Okay']
+        title: 'Ami ajouté',
+        subTitle: 'Appuyez sur l\'ami pour discuter avec lui',
+        buttons: ['D\'accord']
       });
       newalert.present();
     })
   }
+
+  
  //la fonction qui refuse une demande amis 
   ignore(item) {
     this.requestservice.deleterequest(item).then(() => {

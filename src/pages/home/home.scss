@@ -1,3 +1,43 @@
 page-home {
 
+    ion-content {
+        .logo {
+          margin-top: -10%;
+    
+        }
+    
+        .blueLagoon {
+          margin-top: 10%;
+          opacity: 0.2;
+          position: absolute;
+        }
+        .instruction {
+          margin-top: 25%;
+          color: black;
+          font-family: SignPainter;
+          font-size: 22px;
+        }
+      }
+      h1 {
+        font-family: "PT Mono";
+        font-size: 25px;
+      }
+      h2 {
+        font-family: SansSerif;
+        font-size: 25px;
+      }
+      ion-content {
+        
+      }
+    
+      p {
+        margin-top: -10%;
+        font-size: 20px;
+        color: darkorange;
+        font-family: Ayuthaya;
+    
+      }
+    
+    
+
 }

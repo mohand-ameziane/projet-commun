@@ -90,6 +90,7 @@ export class UserProvider {
     })
     return promise;
 }
+//recupere un utilisateur
 getuserdetails() {
   var promise = new Promise((resolve, reject) => {
   this.firedata.child(firebase.auth().currentUser.uid).once('value', (snapshot) => {

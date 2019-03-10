@@ -18,6 +18,7 @@
         <ion-list-header>
           invitation
         </ion-list-header>
+        
         <ion-item-sliding *ngFor="let item of myrequests">
           <ion-item>
           <ion-avatar item-left>
@@ -25,6 +26,7 @@
           </ion-avatar>
           <h4>{{item.displayName}}</h4>
           </ion-item>
+
           <ion-item-options>
             <button ion-button color="secondary" (click)="accept(item)">
               <ion-icon name="checkmark"></ion-icon>

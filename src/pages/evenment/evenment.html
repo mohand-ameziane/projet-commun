@@ -6,27 +6,37 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Evenment</ion-title>
+    <ion-title>Événement</ion-title>
+    <ion-fab bottom right>
+        <button ion-button icon-only (click)="presentModal()">
+          <ion-icon name="wine"></ion-icon>
+        </button>
+      </ion-fab>
   </ion-navbar>
-  <ion-fab bottom right>
-      <button ion-button (click)="presentModal()">Ajouter</button>
-  </ion-fab>
-
 </ion-header>
 
 
 <ion-content padding>
+    <h1 text-center> Voici les derniers evenements créer </h1>
+  <br />
+  <ion-card>
+    <img src="assets/imgs/event.png" alt="pp" class="pp">
+    <br />
+    <h2> Événement</h2>
+    <p class="descriptif"> <ion-icon name="locate"></ion-icon>Lieu: <br />
+    </p>
 
-    
-    
-    <ion-card>
-      <ion-card-header>
+    <button ion-button class="btnSavoir"> EN SAVOIR PLUS </button>
+  </ion-card>
+  <br>
 
-      </ion-card-header>
-      <ion-card-content>
-          
-      </ion-card-content>
-    </ion-card>
-    
-    
+  <ion-card>
+    <img src="assets/imgs/event.png" alt="pp" class="pp">
+    <br />
+    <h2> {{displayName}} Evenement</h2>
+    <p class="descriptif"> <ion-icon name="locate"></ion-icon>Lieu: <br />
+    </p>
+
+    <button ion-button class="btnSavoir"> EN SAVOIR PLUS </button>
+  </ion-card>
     </ion-content>
