@@ -1,0 +1,64 @@
+page-login {
+    background-color:lightblue;
+
+    //Desactiver le soulignement par défaut
+        .item-md.item-block .item-inner,
+    .item-md.item-input.input-has-focus .item-inner,
+    .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner,
+    .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner,
+    .list-md .item-input.input-has-focus:last-child,
+    .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child,
+    .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+        border-bottom: none;
+        box-shadow: none;
+    }
+    .list-md .item-input.input-has-focus:last-child .item-inner,
+    .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner,
+    .list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child .item-inner {
+        box-shadow: none; 
+    }
+
+    ion-item{
+        border:solid 1px #f1f1f1 !important;
+        border-radius:4px;
+        width:90% !important;
+        padding-right:10px !important;
+        padding-bottom: 10px !important;
+        margin-bottom:10px !important;
+        height:30px !important;
+        background-color: #f1f1f1 !important;
+    }
+     
+    
+    .icon{
+        margin-right:7px;
+    }
+   
+    .content{
+        position:absolute;
+        top:20%;
+        left:5%;
+        background-color:lightblue;
+            
+    }
+    
+    #forgot{
+        
+        margin-left:20px;
+    }
+    
+    #pass{
+      
+        font-size:16px;
+        color:lightgray;
+    }
+    
+    .footer{
+        position:absolute;
+        bottom:200px;
+        left:23%;
+        color:#488aff;
+        text-decoration:underline;
+    }
+
+}

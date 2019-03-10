@@ -1,0 +1,31 @@
+page-message {
+
+	.titleMsg{
+		font-size:18px;
+		color:black;
+	}
+	
+	.notifMsg{
+		position:absolute; 
+		font-size:13px; 
+		right:30px; 
+		margin-top:5px;
+		border:solid 1px orange; 
+		background-color:orange; 
+		color:white; width:17px; 
+		border-radius:10px;
+		text-align:center
+	}
+	
+	.contenuMsg{
+		color:rgb(153,153,153);
+		font-size:12px;
+		margin-top:7px;
+		margin-right:60px;
+	}
+	
+	.timeMsg{
+		position:absolute; 
+		right : 30px;
+	}
+}

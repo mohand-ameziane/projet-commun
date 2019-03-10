@@ -1,0 +1,76 @@
+page-enregistrer {
+
+
+      
+    //Desactiver le soulignement par défaut
+    .item-md.item-block .item-inner,
+.item-md.item-input.input-has-focus .item-inner,
+.item-md.item-input.ng-valid.input-has-value:not(.input-has-focus) .item-inner,
+.item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus) .item-inner,
+.list-md .item-input.input-has-focus:last-child,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child,
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child {
+    border-bottom: none;
+    box-shadow: none;
+}
+.list-md .item-input.input-has-focus:last-child .item-inner,
+.list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):last-child .item-inner,
+.list-md .item-input.ng-invalid.ng-touched:not(.input-has-focus):last-child .item-inner {
+    box-shadow: none; 
+}
+
+    ion-content{
+        background-color: lightblue !important;
+        
+        ion-card{
+            position:absolute;
+            top:30px;
+            height:85% !important;
+            width:85% !important;
+		
+        }
+        
+        #btnNext{
+            position:absolute;
+            right: 10% !important;
+            width:110px;
+            
+        }
+        
+        ion-item{
+            border:none;
+            border-radius:3px;
+            margin-bottom:10px !important;
+            height: 10px !important;
+            background-color: #f1f1f1 !important;
+            width:80% !important;
+            position:absolute;
+            left:10%;
+        }
+        
+		#inscriptionHeader{
+			font-size:22px;
+			color:blue;
+			margin-left:10%;
+			margin-top:10%;
+			font-weight:bold;
+			}
+        
+		.label{
+			margin-left:10%;
+			font-size:14px;
+			font-family: "Calibri",  monospace;
+			letter-spacing: 2px;
+			color:gray;
+			}
+			
+		.asterisque{
+			color:red;
+        }	
+        
+       
+           
+          
+    }     
+
+    }

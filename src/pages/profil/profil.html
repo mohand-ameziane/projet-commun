@@ -1,0 +1,113 @@
+<ion-header>
+
+  <ion-navbar color="custome">
+    <ion-title text-center> Profil </ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!--CARD correspond au cadre -->
+
+    <!-- IMAGE PROFIL -->
+    <ion-avatar>
+      <img src="./assets/imgs/avatar.png" class="avatar">
+    </ion-avatar>
+
+
+  <ion-card>
+
+    <div class="infoUser" text-center (click)="ChangeNom()"> Name:  <p text-uppercase>{{displayName}}</p> </div>
+
+    <div class="infoUser" text-center> Universite:  <p text-uppercase>{{universitename}}</p> </div>
+
+    <div class="infoUser" text-center> Filiere:  <p text-uppercase>{{filiername}}</p> </div>
+
+  </ion-card>
+
+
+
+  <ion-card-content >
+
+
+    <ion-buttons class="btn" *ngIf="this.isAuth">
+      <button ion-button>
+        <ion-icon name="mail"> Envoie lui un message ! </ion-icon>
+      </button>
+
+    </ion-buttons>
+
+  </ion-card-content>
+
+
+
+  <ion-list>
+
+    <ion-item>
+      <p text-center>  <ion-icon name="alert"> </ion-icon> En savoir plus</p>
+    </ion-item>
+
+
+
+    <ion-item>
+      <p text-center>Plus à venir</p>
+      <p text-center> ...</p>
+    </ion-item>
+  </ion-list>
+
+
+  <div class="center">
+    <button class="btnLogout" ion-button round outline (click)="logout()"> <ion-icon color="red" name="power"> </ion-icon> Logout</button>
+  </div>
+
+</ion-content>
+
+
+
+
+<!--
+  Generated template for the ProfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content>
+
+    <div class="profile-image" (click)="Changeimage()">
+        <img src="assets/imgs/b-images.jpg">
+      </div>
+
+      <div>
+        <h2 (click)="ChangeNom()">{{displayName}}</h2>
+      </div>
+
+      <div>
+          <h2 >{{filiername}}</h2>
+        </div>
+    <div>
+      <h2 >{{universitename}}</h2>
+    </div>
+    
+      <div>
+          Appuyez sur votre nom pour le changer.
+      </div>
+
+
+      
+   
+         
+     
+
+</ion-content>
+-->
+

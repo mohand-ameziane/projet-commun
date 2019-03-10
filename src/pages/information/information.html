@@ -1,0 +1,39 @@
+<!--
+  Generated template for the InformationPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+   <ion-navbar>
+     <ion-title>Information</ion-title>
+   </ion-navbar>
+ 
+ </ion-header>
+ 
+ 
+ <ion-content padding>
+     
+ 
+ 
+ 
+ 
+ 
+ 
+     <div class="profile-image">
+         <img class="profile-image"  src="{{imgurl}}">
+       </div>
+       
+       <div>
+         <button ion-button  (click)="chooseimage()" style="width:90%">choisir une image </button>
+       </div>
+       
+       <div [hidden]="moveon">
+         <button ion-button (click)="updateproceed()" style="width:90%"> Télécharger et continuer</button>
+       </div>
+       
+       <div [hidden]="!moveon">
+           <button ion-button (click)="proceed()" style="width:90%">passé a l'etape suivante </button>
+         </div>
+ 
+ </ion-content>
