@@ -9,19 +9,25 @@ import { AngularFireAuth } from "angularfire2/auth";
   templateUrl: 'home.html',
 })
 export class HomePage {
-  constructor(private afAuth : AngularFireAuth, private toast : ToastController,
-    public navCtrl: NavController, public navParams: NavParams) {
-  }
-   
-  ionViewDidLoad() {
-    
-   
+  constructor(private afAuth: AngularFireAuth, private toast: ToastController,
+              public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  allepageprofil(){
-   this.navCtrl.push('ListProfilPage');
+  ionViewDidLoad() {
+
+
   }
-  allepageevenment(){
-   this.navCtrl.push('EvenmentPage');
+
+  goToEvent() {
+    this.navCtrl.push('EvenmentPage');
   }
+
+  goToSearch() {
+    this.navCtrl.push('RecherchePage');
+  }
+
+  goToMessage() {
+    this.navCtrl.push('MessagePage');
+  }
+
 }

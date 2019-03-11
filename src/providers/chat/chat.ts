@@ -1,5 +1,5 @@
 
-import { Injectable } from '@angular/core';
+  import { Injectable } from '@angular/core';
 import firebase from 'firebase';
 import { Events } from 'ionic-angular';
 /*
@@ -8,14 +8,14 @@ import { Events } from 'ionic-angular';
   See https://angular.io/guide/dependency-injection for more info on providers
   and Angular DI.
 */
-//forniseur des message 
+//forniseur des message
 @Injectable()
 export class ChatProvider {
   firebuddychats = firebase.database().ref('/message');
   buddy: any;
   buddymessages = [];
   constructor(public events: Events) {
-    
+
   }
  
   initializebuddy(buddy) {

@@ -1,43 +1,81 @@
 page-home {
 
-    ion-content {
-        .logo {
-          margin-top: -10%;
-    
-        }
-    
-        .blueLagoon {
-          margin-top: 10%;
-          opacity: 0.2;
-          position: absolute;
-        }
-        .instruction {
-          margin-top: 25%;
-          color: black;
-          font-family: SignPainter;
-          font-size: 22px;
-        }
-      }
-      h1 {
-        font-family: "PT Mono";
-        font-size: 25px;
-      }
-      h2 {
-        font-family: SansSerif;
-        font-size: 25px;
-      }
-      ion-content {
-        
-      }
-    
-      p {
-        margin-top: -10%;
-        font-size: 20px;
-        color: darkorange;
-        font-family: Ayuthaya;
-    
-      }
-    
-    
 
+    ion-header{
+      background-color:lightblue !important;
+      img{
+        height:50px;
+        width:100px;
+        position:relative;
+        left:40%;
+        top:5px;
+      }
+    }
+
+    ion-content {
+
+
+      h2 {
+        font-family: Calibri;
+        font-size: 21px;
+        text-align: center;
+        font-weight:bold;
+      }
+
+      h3{
+        font-family:Calibri;
+        font-size:16px;
+        text-align:center;
+        color:gray;
+      }
+
+      .lineSeparator{
+        height:1px;
+        color:gray;
+        width:100%;
+        margin-bottom:10px;
+      }
+
+      ion-card{
+        height:18% !important;
+        border-radius:5px !important;
+        margin-top:30px !important;
+      }
+
+      #Evenement{
+        background-image: url("../../assets/imgs/btn1.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #Recherche{
+        background-image: url("../../assets/imgs/button2.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #Message{
+        background-image: url("../../assets/imgs/button3.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .title{
+        margin-top:20px;
+        margin-left:20px;
+        color:white;
+        font-size:17px;
+
+      }
+
+      .sub-title{
+        color:white;
+        margin-left:20px;
+        font-family:calibri;
+        letter-spacing : 1px;
+      }
+    }
 }

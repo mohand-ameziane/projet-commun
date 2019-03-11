@@ -44,7 +44,7 @@ export class RecherchePage {
     if (q.trim() == '') {
       return;
     }
- 
+
     this.filteredusers = this.filteredusers.filter((v) => {
       if (v.displayName.toLowerCase().indexOf(q.toLowerCase()) > -1) {
         return true;
@@ -77,10 +77,6 @@ export class RecherchePage {
         alert(err);
       })
     }
-  }
-
-  goToCriteres(){
-    this.navCtrl.push('CriterePage');
   }
 
 }
