@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import firebase from 'firebase';
+import {LoginPage} from "../login/login";
 
 
 /**
@@ -21,14 +22,16 @@ export class ConfirmEmailPage {
   private us;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public afAuth: AngularFireAuth) {
-    //this.us = navParams.get('us');
-    //this.us.sendEmailVerification();
     this.afAuth.auth.currentUser.sendEmailVerification();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ConfirmEmailPage');
+    setTimeout(() => {
+      this.navCtrl.setRoot("LoginPage");
+    }, 3000);
   }
-  
+
+
 
 }

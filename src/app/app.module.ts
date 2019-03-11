@@ -22,6 +22,7 @@ import { ImghandlerProvider } from '../providers/imghandler/imghandler';
 import { RequestsProvider } from '../providers/requests/requests';
 import { ChatProvider } from '../providers/chat/chat';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import {LoginPage} from "../pages/login/login";
 @NgModule({
   declarations: [
     MyApp,

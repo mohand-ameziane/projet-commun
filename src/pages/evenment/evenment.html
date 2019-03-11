@@ -7,17 +7,12 @@
 
   <ion-navbar>
     <ion-title>Événement</ion-title>
-    <ion-fab bottom right>
-        <button ion-button icon-only (click)="presentModal()">
-          <ion-icon name="wine"></ion-icon>
-        </button>
-      </ion-fab>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-    <h1 text-center> Voici les derniers evenements créer </h1>
+  <h1 text-center> Voici les derniers evenements créer </h1>
   <br />
   <ion-card>
     <img src="assets/imgs/event.png" alt="pp" class="pp">
@@ -30,6 +25,10 @@
   </ion-card>
   <br>
 
+  <button ion-button icon-only (click)="presentModal()" id="add">
+    <ion-icon name="add-circle"></ion-icon>
+  </button>
+
   <ion-card>
     <img src="assets/imgs/event.png" alt="pp" class="pp">
     <br />
@@ -40,5 +39,4 @@
     <button ion-button class="btnSavoir"> EN SAVOIR PLUS </button>
   </ion-card>
 
-  <button ion-button> {{tempar[0]}}</button>
-    </ion-content>
+</ion-content>

@@ -15,14 +15,14 @@ export class EvenmentPage {
   items;
   ref = firebase.database().ref('items/');
   constructor(
-      private modalControler: ModalController
-      ){
+    private modalControler: ModalController
+  ){
 
-      }
+  }
 
-presentModal(){
-  const MyModal = this.modalControler.create('ModalPage');
-  MyModal.present();
+  presentModal(){
+    const MyModal = this.modalControler.create('ModalPage');
+    MyModal.present();
 
-}
+  }
 }
