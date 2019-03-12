@@ -1,6 +1,5 @@
 <!--
   Generated template for the ModalPage page.
-
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
@@ -17,33 +16,33 @@
 
 
 <ion-content padding>
-    <ion-list>
+  <ion-list>
 
-        <ion-item>
-          <ion-label floating>Titre de l'évenement</ion-label>
-          <ion-input type="text" [(ngModel)]="TitreEv"></ion-input>
-        </ion-item>
-      
-        <ion-item>
-          <ion-label floating>Description</ion-label>
-          <ion-textarea rows= "5" type="text" [(ngModel)]="DescEvent"></ion-textarea>
-        </ion-item>
-        <br>
-        <ion-item>
-            <ion-label><ion-icon name="calendar"></ion-icon> Date</ion-label> 
-            <ion-datetime [min]="minDateOfPicker" displayFormat="D MMMM" pickerFormat="D MMMM" [(ngModel)]="dateOfEvent"></ion-datetime>
-        </ion-item>
-      
-        <ion-item>
-            <ion-label><ion-icon clear name="clock"></ion-icon> Heure</ion-label>
-            <ion-datetime [min]="minDateOfPicker" displayFormat="H:mm" pickerFormat="H:mm" [(ngModel)]="dateOfEvent"></ion-datetime>
-        </ion-item>
-        <br>
-       </ion-list>
-    
-    <button ion-button (click)=openImagePicker()></button>
-    <button ion-button (click)="addEvent(TitreEv, DescEvent, dateOfEvent)">Creer
-      </button>
-   
+    <ion-item>
+      <ion-label floating>Titre de l'évenement</ion-label>
+      <ion-input type="text" [(ngModel)]="TitreEv"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Description</ion-label>
+      <ion-textarea rows= "5" type="text" [(ngModel)]="DescEvent"></ion-textarea>
+    </ion-item>
+    <br>
+    <ion-item>
+      <ion-label><ion-icon name="calendar"></ion-icon> Date</ion-label>
+      <ion-datetime [min]="minDateOfPicker" displayFormat="D MMMM" pickerFormat="D MMMM" [(ngModel)]="dateOfEvent"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label><ion-icon clear name="clock"></ion-icon> Heure</ion-label>
+      <ion-datetime [min]="minDateOfPicker" displayFormat="H:mm" pickerFormat="H:mm" [(ngModel)]="dateOfEvent"></ion-datetime>
+    </ion-item>
+    <br>
+  </ion-list>
+
+  <button ion-button (click)=openImagePicker()></button>
+  <button ion-button (click)="addEvent(TitreEv, DescEvent, dateOfEvent)">Creer
+  </button>
+
 
 </ion-content>

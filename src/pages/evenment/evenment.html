@@ -8,35 +8,47 @@
   <ion-navbar>
     <ion-title>Événement</ion-title>
     <ion-fab bottom right>
-        <button ion-button icon-only (click)="presentModal()">
-          <ion-icon name="wine"></ion-icon>
-        </button>
-      </ion-fab>
+      <button ion-button icon-only (click)="presentModal()" id="buttonIcon" clear>
+        <ion-icon name="add-circle" id="icon" ></ion-icon>
+      </button>
+    </ion-fab>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-    <h1 text-center> Voici les derniers evenements créer </h1>
+
+  <h1 text-center> Liste des événements créés </h1>
   <br />
-  <ion-card>
-    <img src="assets/imgs/event.png" alt="pp" class="pp">
-    <br />
-    <h2> Événement</h2>
-    <p class="descriptif"> <ion-icon name="locate"></ion-icon>Lieu: <br />
-    </p>
 
-    <button ion-button class="btnSavoir"> EN SAVOIR PLUS </button>
-  </ion-card>
-  <br>
+  <ion-list no-lines>
+    <ion-list>
+      <ion-item-sliding *ngFor="let key of filteredusers">
+        <ion-item >
+          <ion-card>
 
-  <ion-card>
-    <img src="assets/imgs/event.png" alt="pp" class="pp">
-    <br />
-    <h2> {{displayName}} Evenement</h2>
-    <p class="descriptif"> <ion-icon name="locate"></ion-icon>Lieu: <br />
-    </p>
 
-    <button ion-button class="btnSavoir"> EN SAVOIR PLUS </button>
-  </ion-card>
-    </ion-content>
+
+            <ion-list lines>
+              <img src="assets/imgs/event.png" alt="pp" class="pp">
+              <br />
+              <h2> {{key.TitreEv}}</h2>
+
+              <p class="descriptif">
+
+                Description :  {{key.DescEvent }} <br />
+
+              {{key.dateOfEvent}} </p>
+
+            </ion-list>
+
+
+          </ion-card>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-list>
+
+
+
+</ion-content>

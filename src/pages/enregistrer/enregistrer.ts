@@ -27,7 +27,7 @@ export class EnregistrerPage {
       duration: 3000,
       position: 'bottom'
     });
-    if(this.newuser.email=='' || this.newuser.pasword=='' || this.newuser.name==''){
+    if(this.newuser.email=='' || this.newuser.pasword=='' || this.newuser.name=='' || this.newuser.universite=='' || this.newuser.filier ==''){
        toaster.setMessage('Veuillez entrer des données valides');
        toaster.present();
     }

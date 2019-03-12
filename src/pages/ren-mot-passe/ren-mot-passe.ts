@@ -33,14 +33,14 @@ export class RenMotPassePage {
     });
     this.userservice.renesialiseMotPasse(this.email).then((res : any)=>{
        if(res.success){
-          alert.setTitle('Email envoyer ');
+          alert.setTitle('Email envoyé ');
           alert.setSubTitle('Veuillez suivre les instructions dans lemail pour réinitialiser votre mot de passe');
-          toaster.setMessage('email envoyér regarde ta boit mail et suivre le lien ');
+          toaster.setMessage('Email envoyé, veuillez regarder votre boîte mail universitaire ');
           toaster.present();
        }
        else{
          alert.setTitle('Échoué');
-         toaster.setMessage('errure dans email ou ta pas encoure un compte ');
+         toaster.setMessage('Email incorrect');
          toaster.present();
        }
     })

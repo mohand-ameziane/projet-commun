@@ -13,6 +13,7 @@ import firebase from 'firebase';
 @Injectable()
 export class UserProvider {
     firedata= firebase.database().ref('/IonicApp');
+  
     
     
   constructor(public afAuth: AngularFireAuth) {
@@ -21,6 +22,8 @@ export class UserProvider {
   /*
   ajoute un utilisateur a la base de donnes 
   */
+ 
+
   ajouteuser(newuser ){
     var promise= new Promise((resolve, rejecte)=>{
          this.afAuth.auth.createUserWithEmailAndPassword(newuser.email, newuser.pasword).then(()=>{

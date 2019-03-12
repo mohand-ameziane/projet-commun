@@ -6,27 +6,28 @@
 -->
 <ion-header>
 
-    <ion-navbar>
-        <ion-title> Accueil</ion-title>
-          </ion-navbar>
+    <img src="../../assets/imgs/unir.png">
 </ion-header>
 
 
 <ion-content padding>
-  <!--  <button ion-button round (click)="allepageprofil()">alle a la page profil </button>
-   <button ion-button round (click)="allepageevenment()">alle a la page evenment </button>
-   -->
-   <h1 text-center>Bienvenue sur </h1>
-   <img src="./assets/imgs/unir.png" class="logo">
- 
-   <p text-center> L'appli pour faire plus à ton université!</p>
- 
-   <img src="./assets/imgs/w.png" class="blueLagoon">
- 
- 
-   <div class="instruction" text-left>
-     <ion-icon name="contact"> </ion-icon> Créer ton profil<br><br><br>
-     <ion-icon name="contacts" (click)="allepageprofil()"> </ion-icon> Échange avec des gens de ton université ou d'autres université <br><br><br>
-     <ion-icon name="flame"> </ion-icon> Rejoint ou créer des evenements pour augmenter ton cercle d'amis
-   </div>
+  <h2> BIENVENUE SUR UNIR </h2>
+  <h3> Application de rencontre universitaire </h3>
+  <hr class="lineSeparator">
+
+  <ion-card id="Evenement" (click)="goToEvent()">
+    <p class = "title"> EVENEMENT </p>
+    <p class= "sub-title"> Informez vous ou créez votre propre évènement</p>
+  </ion-card>
+
+  <ion-card id="Recherche" (click)="goToSearch()">
+    <p class="title"> RECHERCHE DE PROFIL </p>
+    <p class= "sub-title"> Recherchez et contactez des étudiants de tout université</p>
+  </ion-card>
+
+  <ion-card id ="Message" (click)="goToMessage()">
+    <p class="title"> MESSAGERIE </p>
+    <p class= "sub-title"> Tchatez et faites de nouvelles connaissances</p>
+  </ion-card>
+
 </ion-content>

@@ -22,18 +22,14 @@ import { ImghandlerProvider } from '../providers/imghandler/imghandler';
 import { RequestsProvider } from '../providers/requests/requests';
 import { ChatProvider } from '../providers/chat/chat';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { EvenmentProvider } from '../providers/evenment/evenment';
 @NgModule({
   declarations: [
     MyApp,
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp,{
-      monthNames: ['Janvier', 'Fevrier', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet' , 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'],
-      monthShortNames: ['Jan', 'Fev', 'Mar', 'Avr', 'Mai', 'Jui', 'Juil', 'Aou', 'Spe', 'Oct', 'Nov', 'Dec'],
-      dayNames: ['Lunid', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
-      dayShortNames: ['Lun', 'Mar', 'Mer', 'Jeu', 'Ven', 'Sam', 'Dim'],
-    }),
+    IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireAuthModule,
     AngularFireDatabaseModule
@@ -55,7 +51,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     ImghandlerProvider,
     RequestsProvider,
     ChatProvider, 
-    Calendar
+    Calendar,
+    EvenmentProvider
     
   ]
 })

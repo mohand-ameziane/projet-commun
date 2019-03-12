@@ -2,6 +2,8 @@ import { Component , NgZone} from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
 import { ImghandlerProvider } from '../../providers/imghandler/imghandler';
 import { UserProvider } from '../../providers/user/user';
+import firebase from 'firebase';
+
 /**
  * Generated class for the ProfilPage page.
  *
@@ -120,7 +122,13 @@ export class ProfilPage {
     });
     alert.present();
   }
-  
+
+
+  logout() {
+    firebase.auth().signOut().then(() => {
+      this.navCtrl.parent.parent.setRoot('LoginPage');
+    })
+  }
   
  
   

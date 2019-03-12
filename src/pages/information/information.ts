@@ -49,7 +49,7 @@ export class InformationPage {
     this.userservice.updateimage(this.imgurl).then((res: any) => {
       loader.dismiss();
       if (res.success) {
-        this.navCtrl.setRoot('TablsPage');
+        this.navCtrl.push('ConfirmEmailPage');
       }
       else {
         alert(res);
@@ -58,7 +58,7 @@ export class InformationPage {
   }
  
   proceed() {
-    this.navCtrl.setRoot('TablsPage');
+    this.navCtrl.setRoot('ConfirmEmailPage');
   }
 
 }
