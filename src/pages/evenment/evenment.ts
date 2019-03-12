@@ -24,6 +24,7 @@ export class EvenmentPage {
     this.userservice.getallevents().then((res: any) => {
       this.filteredusers = res;
       this.temparr = res;
+
     })
 
   }

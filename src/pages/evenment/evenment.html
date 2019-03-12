@@ -8,7 +8,7 @@
   <ion-navbar>
     <ion-title>Événement</ion-title>
     <ion-fab bottom right>
-      <button ion-button icon-only (click)="presentModal()" id="buttonIcon">
+      <button ion-button icon-only (click)="presentModal()" id="buttonIcon" clear>
         <ion-icon name="add-circle" id="icon" ></ion-icon>
       </button>
     </ion-fab>
@@ -17,6 +17,9 @@
 
 
 <ion-content padding>
+
+  <h1 text-center> Liste des événements créés </h1>
+  <br />
 
   <ion-list no-lines>
     <ion-list>
@@ -27,14 +30,16 @@
 
 
             <ion-list lines>
+              <img src="assets/imgs/event.png" alt="pp" class="pp">
+              <br />
+              <h2> {{key.TitreEv}}</h2>
 
-              <h2> {{key.DescEvent}}</h2>
+              <p class="descriptif">
 
-              <p class="descriptif">Etudiant à <span class="uppercase">{{key.TitreEv}}</span><br />
+                Description :  {{key.DescEvent }} <br />
 
-                en  <span class="uppercase">{{key.dateOfEvent }}</span></p>
+              {{key.dateOfEvent}} </p>
 
-              <button ion-button (click)="sendreq(key)"> Demandez d'ouvrir une discussion ! </button>
             </ion-list>
 
 
@@ -44,27 +49,6 @@
     </ion-list>
   </ion-list>
 
-  <h1 text-center> Liste des événements créés </h1>
-  <br />
-  <ion-card>
-    <img src="assets/imgs/event.png" alt="pp" class="pp">
-    <br />
-    <h2> Événement</h2>
-    <p class="descriptif"> <ion-icon name="locate"></ion-icon>Lieu: <br />
-    </p>
 
-    <button ion-button class="btnSavoir"> EN SAVOIR PLUS </button>
-  </ion-card>
-  <br>
-
-  <ion-card>
-    <img src="assets/imgs/event.png" alt="pp" class="pp">
-    <br />
-    <h2> {{displayName}} Evenement</h2>
-    <p class="descriptif"> <ion-icon name="locate"></ion-icon>Lieu: <br />
-    </p>
-
-    <button ion-button class="btnSavoir"> EN SAVOIR PLUS </button>
-  </ion-card>
 
 </ion-content>

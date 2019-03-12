@@ -6,6 +6,7 @@ page-evenment {
 
   #buttonIcon{
     background-color: transparent !important;
+    border:none !important;
   }
 
   h1 {
@@ -54,12 +55,6 @@ page-evenment {
       margin-left: 16%;
     }
 
-    #add {
-      position:fixed;
-      right :  10px;
-      bottom: 10px;
-
-    }
   }
 
 }
