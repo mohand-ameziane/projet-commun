@@ -1,7 +1,16 @@
 page-evenment {
+
+  #icon{
+    color:black !important;
+  }
+
+  #buttonIcon{
+    background-color: transparent !important;
+  }
+
   h1 {
-    font-family: "PT Mono";
-    font-size: 25px;
+    font-family: "Calibri";
+    font-size: 29px;
   }
 
   ion-card{

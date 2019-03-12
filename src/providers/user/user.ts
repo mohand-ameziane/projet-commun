@@ -13,6 +13,7 @@ import firebase from 'firebase';
 @Injectable()
 export class UserProvider {
     firedata= firebase.database().ref('/IonicApp');
+    firedata2=firebase.database().ref('/events');
     
     
   constructor(public afAuth: AngularFireAuth) {
@@ -142,6 +143,24 @@ getallusers() {
   })
   return promise;
 }
+
+  getallevents() {
+    var promise = new Promise((resolve, reject) => {
+      this.firedata2.orderByChild('uid').once('value', (snapshot) => {
+        let userdata = snapshot.val();
+        let temparr = [];
+        for (var key in userdata) {
+          temparr.push(userdata[key]);
+        }
+        resolve(temparr);
+      }).catch((err) => {
+        reject(err);
+      })
+    })
+    return promise;
+  }
+
+
 
 
 

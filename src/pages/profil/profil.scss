@@ -105,6 +105,9 @@ page-profil {
    }
 
   ion-card {
+    span:first-letter{
+      text-transform: uppercase;
+    }
     .infoUser {
       font-size: 15px;
       color: #666666;
@@ -113,5 +116,7 @@ page-profil {
       font-weight: bold;
 
     }
+
+    height:100% !important;
   }
  }

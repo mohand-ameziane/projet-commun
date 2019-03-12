@@ -63,11 +63,6 @@ export class ModalPage {
   }
 
 
-
-
-
-  //https://www.youtube.com/watch?v=dth3aq_QPzU
-
   closeModal(){
     this.view.dismiss();
   }

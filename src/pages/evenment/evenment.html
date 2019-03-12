@@ -7,12 +7,44 @@
 
   <ion-navbar>
     <ion-title>Événement</ion-title>
+    <ion-fab bottom right>
+      <button ion-button icon-only (click)="presentModal()" id="buttonIcon">
+        <ion-icon name="add-circle" id="icon" ></ion-icon>
+      </button>
+    </ion-fab>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <h1 text-center> Voici les derniers evenements créer </h1>
+
+  <ion-list no-lines>
+    <ion-list>
+      <ion-item-sliding *ngFor="let key of filteredusers">
+        <ion-item >
+          <ion-card>
+
+
+
+            <ion-list lines>
+
+              <h2> {{key.DescEvent}}</h2>
+
+              <p class="descriptif">Etudiant à <span class="uppercase">{{key.TitreEv}}</span><br />
+
+                en  <span class="uppercase">{{key.dateOfEvent }}</span></p>
+
+              <button ion-button (click)="sendreq(key)"> Demandez d'ouvrir une discussion ! </button>
+            </ion-list>
+
+
+          </ion-card>
+        </ion-item>
+      </ion-item-sliding>
+    </ion-list>
+  </ion-list>
+
+  <h1 text-center> Liste des événements créés </h1>
   <br />
   <ion-card>
     <img src="assets/imgs/event.png" alt="pp" class="pp">
@@ -24,10 +56,6 @@
     <button ion-button class="btnSavoir"> EN SAVOIR PLUS </button>
   </ion-card>
   <br>
-
-  <button ion-button icon-only (click)="presentModal()" id="add">
-    <ion-icon name="add-circle"></ion-icon>
-  </button>
 
   <ion-card>
     <img src="assets/imgs/event.png" alt="pp" class="pp">
