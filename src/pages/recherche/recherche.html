@@ -5,8 +5,9 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <p id="header"> Recherche de profil
-  </p>
+    <ion-navbar>
+        <ion-title>Recherche de profil</ion-title>
+      </ion-navbar>
 </ion-header>
 
 <ion-content padding >
@@ -17,11 +18,8 @@
             <ion-item >
               <ion-card> 
                 <!-- <img class="profile-image" src="assets/imgs/b-images.jpg">    -->
-                <img class="profile-image"   src="{{key.photoURL}}">
+                <img class="profile-image"   src="./assets/imgs/hh.jpg">
                 <br />
-
-                    
-
              <ion-list lines>
 
               <h2> {{key.displayName}}</h2>
@@ -30,7 +28,7 @@
 
                  en  <span class="uppercase">{{key.filiername }}</span></p>
 
-               <button ion-button (click)="sendreq(key)"> Demandez d'ouvrir une discussion ! </button>
+               <button ion-button (click)="sendreq(key)" style="width:90%"> inviter à discuter  ! </button>
             </ion-list>
            
               

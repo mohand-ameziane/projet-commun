@@ -6,7 +6,7 @@
 <ion-header>
 
    <ion-navbar>
-     <ion-title>Information</ion-title>
+     <ion-title>Choisir une image</ion-title>
    </ion-navbar>
  
  </ion-header>
@@ -25,15 +25,15 @@
        </div>
        
        <div>
-         <button ion-button  (click)="chooseimage()" style="width:90%">choisir une image </button>
+         <button ion-button  (click)="chooseimage()" style="width:96%">choisir une image </button>
        </div>
        
        <div [hidden]="moveon">
-         <button ion-button (click)="updateproceed()" style="width:90%"> Télécharger et continuer</button>
+         <button ion-button (click)="updateproceed()" style="width:96%"> Télécharger et continuer</button>
        </div>
        
        <div [hidden]="!moveon">
-           <button ion-button (click)="proceed()" style="width:90%">passé a l'etape suivante </button>
+           <button ion-button (click)="proceed()" style="width:96%">passé a l'etape suivante </button>
          </div>
  
  </ion-content>

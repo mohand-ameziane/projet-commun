@@ -11,15 +11,7 @@ page-recherche {
          box-shadow: none;
      }
 
-    ion-header{
-      #header{
-        text-align:center;
-        font-size:19px;
-        color:gray;
-        font-family: Calibri;
-      }
-
-    }
+ 
     ion-content {
         
 
@@ -47,7 +39,9 @@ page-recherche {
       }
 
       button{
-        margin-left:10% !important;
+        margin-left:5% !important;
+        margin-right: 10% !important;
+        
 
       }
 

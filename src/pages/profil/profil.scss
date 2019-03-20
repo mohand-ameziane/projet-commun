@@ -1,48 +1,15 @@
 page-profil {
 
-  .profile-image{
-    img{
-      height: 200px;
-      width: 200px;
-      border-radius:50%;
-      border: 4px solid rgba(255,255,255,0.4);
-      -webkit-box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
-      -moz-box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
-      box-shadow: 0px 0px 142px -37px rgba(0,0,0,0.75);
-    }
-  }
-  .scroll-content {
-    align-content: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
+
+
    ion-avatar img{
      margin: auto;
-
-   }
-
-   ion-card img{
-     width: 320px;
-     height: 220px;
-     margin: auto;
-
-   }
-
-   ion-card .avatar{
-     opacity: 0.7;
-     position: relative;
-     height: 100px;
-     width:  100px;
 
    }
 
    ion-content .avatar {
      height: 250px;
      width: 250px;
-     //margin-bottom: -20%;
-     //margin-top: -20%;
 
      border-radius:50%;
      border: 4px solid rgba(255,255,255,0.4);
@@ -50,22 +17,6 @@ page-profil {
 
    }
 
-
-
-   ion-grid {
-     height: 60px;
-     color : grey;
-     margin-bottom: 5px;
-     text-align: center;
-     border: 1px solid grey;
-     background-color : white ;
-     border-top-right-radius: 6px;
-     border-top-left-radius: 6px;
-     border-bottom-left-radius: 6px;
-     border-bottom-right-radius: 6px;
-     opacity: 0.6;
-
-   }
    ion-card-content {
      margin-left : 5px;
 
@@ -76,33 +27,6 @@ page-profil {
      }
    }
 
-   ion-card-content .heartBtn {
-     color: red;
-   }
-
-   .list {
-     border-radius: 2px;
-     font-size: 3.4rem;
-     background: #fff;
-     overflow: hidden;
-
-   }
-
-   .policeChoix {
-     font-family: "Courier New";
-     font-size : 12px;
-     width : 20px;
-     height:30px;
-     line-height:20px;
-   }
-
-   .liste {
-     font-family: "Courier New";
-   }
-
-   ion-content {
-     background-color: lightblue !important;
-   }
 
   ion-card {
     span:first-letter{
@@ -116,7 +40,12 @@ page-profil {
       font-weight: bold;
 
     }
+  }
 
-    height:100% !important;
+  .center {
+    .btnLogout {
+      width: 100%;
+      margin-left: 5%;
+    }
   }
  }

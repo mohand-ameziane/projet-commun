@@ -35,7 +35,7 @@ export class EnregistrerPage {
       toaster.setMessage('Votre mot de passe doit contenir au moins 6 caractères');
       toaster.present();
     }
-    else if(!this.newuser.email.includes('@univ-paris1.fr') ){
+    else if(!this.newuser.email.includes('@etu.univ-paris1.fr') ){
       toaster.setMessage('Merci de donner votre Email Universitaire');
       toaster.present();
   }
